@@ -83,6 +83,7 @@ class GameViewController: UIViewController {
             numQuestions -= 1
         } else {
             print("Game clear")
+            //TODO: play win sound and show notification
         }
     }
     
@@ -121,6 +122,7 @@ class GameViewController: UIViewController {
                 hintLabel.text = answer.render()
                 if answer.won() {
                     print("round won")
+                    // TODO add an animation here between rounds
                     nextRound()
                 }
             } else {
