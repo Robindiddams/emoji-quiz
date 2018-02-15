@@ -22,6 +22,12 @@
 			<key>quiz</key>
 			<string>✈️🚂🚗</string>
 		</dict>
+		<dict>
+			<key>answer</key>
+			<string>sharknado</string>
+			<key>quiz</key>
+			<string>🦈🌪</string>
+		</dict>
 	</array>
 	<key>Animals</key>
 	<array>
@@ -30,6 +36,12 @@
 			<string>horse</string>
 			<key>quiz</key>
 			<string>🐎</string>
+		</dict>
+		<dict>
+			<key>answer</key>
+			<string>spider monkey</string>
+			<key>quiz</key>
+			<string>🕷🐒</string>
 		</dict>
 	</array>
 </dict>

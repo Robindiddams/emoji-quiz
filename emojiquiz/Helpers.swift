@@ -68,3 +68,7 @@ public class HangmanString {
 }
 
 
+func addHighScore(name: String, score: Int) {
+    
+}
+

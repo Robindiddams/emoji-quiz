@@ -45,7 +45,6 @@ class SetupController: UIViewController {
         print("category:\(category)")
         questions = Int(questionStepper.value)
         
-        
         // Do any additional setup after loading the view.
     }
 
@@ -67,8 +66,6 @@ class SetupController: UIViewController {
         if let _ = sender as? UIButton, let game = segue.destination as? GameViewController {
             print("button")
             game.setup(cat: category, numQuest: questions)
-//            game.category = category
-//            game.numQuestions = questions
         }
     }
     

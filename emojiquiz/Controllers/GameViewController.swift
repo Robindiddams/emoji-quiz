@@ -7,7 +7,10 @@
 //
 
 import UIKit
-//import HangmanString
+import AVFoundation
+
+var player: AVAudioPlayer?
+
 
 struct Quiz {
     let answer: String
@@ -83,17 +86,33 @@ class GameViewController: UIViewController {
             numQuestions -= 1
         } else {
             print("Game clear")
+            playSound(sound: "win")
             //TODO: play win sound and show notification
+            let alert = UIAlertController(title: "Congrats!", message: "You beat answered all the questions", preferredStyle: UIAlertControllerStyle.alert)
+            // from  https://medium.com/@chan.henryk/alert-controller-with-text-field-in-swift-3-bda7ac06026c
+            let action = UIAlertAction(title: "save!", style: .default) { (alertAction) in
+                if let _ = self.tabBarController?.selectedIndex {
+                    self.tabBarController?.selectedIndex = 1
+                }
+            }
+            alert.addTextField { (textField) in
+                textField.placeholder = "Enter your name"
+            }
+            
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            
+            
         }
     }
     
     func readPlist(){
-        //read out of tge plist
+        //read out of the plist
         var myDict: NSDictionary?
         if let path = Bundle.main.path(forResource: "questions", ofType: "plist") {
             myDict = NSDictionary(contentsOfFile: path)
         }
-        
+
         // grossly pull the answers and questions out of the dict
         if let dict = myDict {
             if let movieQuestions = dict[category] as? [[String:String]] {
@@ -129,11 +148,31 @@ class GameViewController: UIViewController {
                 heartCount -= 1
                 updateHearts()
                 // TODO: lose heart sound effect here
+                playSound(sound: "lose")
             }
         
         }
     }
     
+    func playSound(sound: String) {
+        guard let url = Bundle.main.url(forResource: sound, withExtension: "m4a") else { return }
+        print("hello")
+        do {
+            // i got this https://stackoverflow.com/questions/32036146/how-to-play-a-sound-using-swift
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.m4a.rawValue)
+            
+            guard let player = player else { return }
+            
+            player.play()
+            
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
     
     // enable the buttons for pressing
     func resetAllLetterButtons() {
@@ -150,10 +189,10 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        print("heeeeeeey")
         if let b: UIButton = sender as? UIButton {
             print(b)
         }
     }
- 
-
 }
