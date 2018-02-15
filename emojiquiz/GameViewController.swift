@@ -14,7 +14,10 @@ class GameViewController: UIViewController {
     var greyedOutButtons: [UIButton] = [UIButton]()
     var answer: HangmanString = HangmanString(answer: "")
     
-
+    @IBAction func pressKey(_ sender: UIButton) {
+        pressLetterButton(sender: sender)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

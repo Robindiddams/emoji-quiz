@@ -100,7 +100,7 @@
         <!--quizzing-->
         <scene sceneID="N4K-5R-0cf">
             <objects>
-                <viewController title="quizzing" id="HCZ-32-amG" sceneMemberID="viewController">
+                <viewController title="quizzing" id="HCZ-32-amG" customClass="GameViewController" customModule="emojiquiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zjO-xA-Ifd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,51 +115,81 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Q"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Uau-xb-DLv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bxt-0k-oHm">
                                                 <rect key="frame" x="33" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="W"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="SHm-98-irz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="466-8c-9ut">
                                                 <rect key="frame" x="66" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="E"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="kqi-02-FLT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FB-xG-Bq7">
                                                 <rect key="frame" x="99" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="R"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="uTj-zd-9bp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-pw-hmn">
                                                 <rect key="frame" x="132" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="T"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="w63-2Q-5zb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3wc-2y-2Ne">
                                                 <rect key="frame" x="165" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Y"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Wrj-tt-nmi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98n-Vg-ldQ">
                                                 <rect key="frame" x="198" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="U"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Dst-np-fkr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQ7-6O-Qpn">
                                                 <rect key="frame" x="231" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="I"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Rsh-7s-7P4"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LgT-9z-scn">
                                                 <rect key="frame" x="264" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="O"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="BDK-13-FfJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdd-Ey-czo">
                                                 <rect key="frame" x="297" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="P"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Ig5-4w-i5P"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -170,46 +200,73 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="A"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="LBx-45-ddO"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVI-bj-57v">
                                                 <rect key="frame" x="33" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="S"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="jSE-Ju-DHs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUg-r4-rkU">
                                                 <rect key="frame" x="66" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="D"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="r46-BR-Qqd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ny-A7-1p0">
                                                 <rect key="frame" x="99" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="F"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="D4p-s9-TWc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Met-zc-lbs">
                                                 <rect key="frame" x="132" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="G"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="jh3-Ej-Jad"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8Y-an-8Af">
                                                 <rect key="frame" x="165" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="H"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="cll-6C-oiA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xgD-Zl-eae">
                                                 <rect key="frame" x="198" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="J"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Lzy-Hm-MEn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtD-OR-DCo">
                                                 <rect key="frame" x="231" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="K"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="Wac-5j-cyS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHJ-GE-9Vf">
                                                 <rect key="frame" x="264" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="L"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="qcu-8H-ZJG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -220,36 +277,57 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Z"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="fCj-ql-duG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eM5-HF-6Nj">
                                                 <rect key="frame" x="33" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="X"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="QZq-5M-Q0s"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9a-xA-sl7">
                                                 <rect key="frame" x="66" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="C"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="uPU-hY-ms7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sK5-gu-RJk">
                                                 <rect key="frame" x="99" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="V"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="8wl-nL-Xk6"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moP-YP-hT0">
                                                 <rect key="frame" x="132" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="B"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="jvV-rw-azG"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jb6-df-e05">
                                                 <rect key="frame" x="165" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="N"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="5vz-8l-Owh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8L-AW-MMu">
                                                 <rect key="frame" x="198" y="0.0" width="30" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="M"/>
+                                                <connections>
+                                                    <action selector="pressKey:" destination="HCZ-32-amG" eventType="touchUpInside" id="WXa-rN-YYk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
