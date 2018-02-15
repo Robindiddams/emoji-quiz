@@ -13,7 +13,7 @@
         <!--QUIZ-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="QUIZ" id="9pv-A4-QxB" customClass="FirstViewController" customModule="emojiquiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="QUIZ" id="9pv-A4-QxB" customClass="SetupController" customModule="emojiquiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,8 +40,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WUq-lW-okg" userLabel="Question Stepper">
                                 <rect key="frame" x="125.5" y="192" width="124" height="29"/>
                                 <subviews>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-9L-3Nz">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-9L-3Nz">
                                         <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="questionStepperChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="e2m-qz-ldb"/>
+                                        </connections>
                                     </stepper>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wv-J3-7wd">
                                         <rect key="frame" x="114" y="0.0" width="10" height="29"/>
@@ -57,6 +60,9 @@
                                     <segment title="Movies"/>
                                     <segment title="Animals"/>
                                 </segments>
+                                <connections>
+                                    <action selector="categoryChange:" destination="9pv-A4-QxB" eventType="valueChanged" id="35x-ij-wpj"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7k-50-ENh">
                                 <rect key="frame" x="171" y="558" width="33" height="30"/>
@@ -92,6 +98,11 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <navigationItem key="navigationItem" id="Urs-gy-ezw"/>
+                    <connections>
+                        <outlet property="categorySC" destination="B8s-yK-oAT" id="cyh-oS-ewi"/>
+                        <outlet property="questionCount" destination="4Wv-J3-7wd" id="QHp-ed-3Bt"/>
+                        <outlet property="questionStepper" destination="I1H-9L-3Nz" id="XYM-5D-YA1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -365,6 +376,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hcz-SR-1yV"/>
                     </view>
+                    <connections>
+                        <outlet property="emojiLabel" destination="Odv-Id-qX1" id="PbD-qA-ueo"/>
+                        <outlet property="heartContainer" destination="4tY-3a-TQ6" id="8NS-Mo-5kv"/>
+                        <outlet property="hintLabel" destination="fjx-fV-Wa9" id="Pg9-eE-s25"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnR-uF-qin" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -373,7 +389,7 @@
         <!--HIGHSKORE-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="HIGHSKORE" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="emojiquiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HIGHSKORE" id="8rJ-Kc-sve" customClass="LeaderboardController" customModule="emojiquiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

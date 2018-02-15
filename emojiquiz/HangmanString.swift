@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  rename this to helper methods
 //  emojiquiz
 //
 //  Created by Robin Diddams on 2/14/18.
@@ -12,24 +12,28 @@ public class HangmanString {
     
     var masterAnswer: [Character] = [Character]()
     var correctLetters: [Character] = [Character]()
+    var win: Bool = false
 
     init(answer: String) {
-        masterAnswer = Array(answer)
+        masterAnswer = Array(answer.uppercased())
     }
     
     
     // attempt a letter, if its good it adds it to the thing and returns true
     func attempt(letter: Character) -> Bool {
         // iterate over answer and check if it contains that character
-        for c in masterAnswer {
-            if c == letter {
-                print("master contains \(c)")
-                correctLetters.append(letter)
-                return true
-            }
+        if masterAnswer.contains(letter) {
+            correctLetters.append(letter)
+            return true
         }
         return false
     }
+    
+    func won() -> Bool {
+        return win
+    }
+    
+    
     
     func isCorrectLetter(letter: Character) -> Bool {
         for guessedChar in correctLetters {
@@ -43,6 +47,7 @@ public class HangmanString {
     // returns the answer with underscores where unguessed letters are
     func render() -> String {
         var rend: [Character] = [Character]()
+        var noBlanks: Bool = true
         for c in masterAnswer {
             if c == " " {
                 print("found a space")
@@ -51,9 +56,15 @@ public class HangmanString {
                 rend.append(c)
             } else {
                 rend.append("_")
+                noBlanks = false
             }
             rend.append(" ")
+        }
+        if noBlanks {
+            win = noBlanks
         }
         return String(rend)
     }
 }
+
+

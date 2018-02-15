@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Movies</key>
+	<array>
+		<dict>
+			<key>answer</key>
+			<string>spiderman</string>
+			<key>quiz</key>
+			<string>🕷🚶‍♂️</string>
+		</dict>
+		<dict>
+			<key>answer</key>
+			<string>top gun</string>
+			<key>quiz</key>
+			<string>⬆️🔫</string>
+		</dict>
+		<dict>
+			<key>answer</key>
+			<string>planes trains and automobiles</string>
+			<key>quiz</key>
+			<string>✈️🚂🚗</string>
+		</dict>
+	</array>
+	<key>Animals</key>
+	<array>
+		<dict>
+			<key>answer</key>
+			<string>horse</string>
+			<key>quiz</key>
+			<string>🐎</string>
+		</dict>
+	</array>
+</dict>
+</plist>

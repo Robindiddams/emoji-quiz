@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		267B57172034F1B1006A91E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B57162034F1B1006A91E4 /* AppDelegate.swift */; };
-		267B57192034F1B1006A91E4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B57182034F1B1006A91E4 /* FirstViewController.swift */; };
-		267B571B2034F1B1006A91E4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B571A2034F1B1006A91E4 /* SecondViewController.swift */; };
 		267B571E2034F1B1006A91E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B571C2034F1B1006A91E4 /* Main.storyboard */; };
 		267B57202034F1B1006A91E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 267B571F2034F1B1006A91E4 /* Assets.xcassets */; };
 		267B57232034F1B1006A91E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 267B57212034F1B1006A91E4 /* LaunchScreen.storyboard */; };
 		267B572B2034F80E006A91E4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B572A2034F80E006A91E4 /* GameViewController.swift */; };
 		267B572D2034FE51006A91E4 /* HangmanString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B572C2034FE51006A91E4 /* HangmanString.swift */; };
+		267B572F20351AC4006A91E4 /* SetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B572E20351AC4006A91E4 /* SetupController.swift */; };
+		267B573120351B97006A91E4 /* LeaderboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267B573020351B97006A91E4 /* LeaderboardController.swift */; };
+		26D02DC320353D86004EEAA1 /* questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26D02DC220353D86004EEAA1 /* questions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		267B57132034F1B1006A91E4 /* emojiquiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = emojiquiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		267B57162034F1B1006A91E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		267B57182034F1B1006A91E4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		267B571A2034F1B1006A91E4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		267B571D2034F1B1006A91E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		267B571F2034F1B1006A91E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		267B57222034F1B1006A91E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		267B57242034F1B1006A91E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267B572A2034F80E006A91E4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		267B572C2034FE51006A91E4 /* HangmanString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanString.swift; sourceTree = "<group>"; };
+		267B572E20351AC4006A91E4 /* SetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupController.swift; sourceTree = "<group>"; };
+		267B573020351B97006A91E4 /* LeaderboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardController.swift; sourceTree = "<group>"; };
+		26D02DC220353D86004EEAA1 /* questions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = questions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,26 @@
 		267B57152034F1B1006A91E4 /* emojiquiz */ = {
 			isa = PBXGroup;
 			children = (
+				26D02DC220353D86004EEAA1 /* questions.plist */,
 				267B57162034F1B1006A91E4 /* AppDelegate.swift */,
-				267B57182034F1B1006A91E4 /* FirstViewController.swift */,
-				267B571A2034F1B1006A91E4 /* SecondViewController.swift */,
 				267B571C2034F1B1006A91E4 /* Main.storyboard */,
-				267B572A2034F80E006A91E4 /* GameViewController.swift */,
+				267B573320351BEE006A91E4 /* Controllers */,
 				267B572C2034FE51006A91E4 /* HangmanString.swift */,
 				267B571F2034F1B1006A91E4 /* Assets.xcassets */,
 				267B57212034F1B1006A91E4 /* LaunchScreen.storyboard */,
 				267B57242034F1B1006A91E4 /* Info.plist */,
 			);
 			path = emojiquiz;
+			sourceTree = "<group>";
+		};
+		267B573320351BEE006A91E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				267B573020351B97006A91E4 /* LeaderboardController.swift */,
+				267B572E20351AC4006A91E4 /* SetupController.swift */,
+				267B572A2034F80E006A91E4 /* GameViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26D02DC320353D86004EEAA1 /* questions.plist in Resources */,
 				267B57232034F1B1006A91E4 /* LaunchScreen.storyboard in Resources */,
 				267B57202034F1B1006A91E4 /* Assets.xcassets in Resources */,
 				267B571E2034F1B1006A91E4 /* Main.storyboard in Resources */,
@@ -146,10 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				267B572D2034FE51006A91E4 /* HangmanString.swift in Sources */,
+				267B573120351B97006A91E4 /* LeaderboardController.swift in Sources */,
 				267B572B2034F80E006A91E4 /* GameViewController.swift in Sources */,
-				267B571B2034F1B1006A91E4 /* SecondViewController.swift in Sources */,
+				267B572F20351AC4006A91E4 /* SetupController.swift in Sources */,
 				267B57172034F1B1006A91E4 /* AppDelegate.swift in Sources */,
-				267B57192034F1B1006A91E4 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
