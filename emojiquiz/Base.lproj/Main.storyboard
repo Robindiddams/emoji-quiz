@@ -400,6 +400,7 @@
                         <outlet property="emojiLabel" destination="Odv-Id-qX1" id="PbD-qA-ueo"/>
                         <outlet property="heartContainer" destination="4tY-3a-TQ6" id="8NS-Mo-5kv"/>
                         <outlet property="hintLabel" destination="fjx-fV-Wa9" id="Pg9-eE-s25"/>
+                        <outlet property="scoreLabel" destination="MiX-5X-naw" id="dgQ-5Z-br4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TnR-uF-qin" userLabel="First Responder" sceneMemberID="firstResponder"/>

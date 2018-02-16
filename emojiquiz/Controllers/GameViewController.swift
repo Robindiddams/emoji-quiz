@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
     }
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var emojiLabel: UILabel!
-    
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var heartContainer: UILabel!
     
     override func viewDidLoad() {
@@ -76,12 +76,13 @@ class GameViewController: UIViewController {
     func nextRound() {
         resetAllLetterButtons()
         score += 1
+        scoreLabel.text = "\(score)"
+        
         if numQuestions > 0 {
             if let quiz = quizPack.popLast() {
                 // setup answer
                 answer = quiz.answer
                 hintLabel.text = answer.render()
-                
                 //animation - modified from an answer from
                 // https://stackoverflow.com/questions/38988043/swift-fade-in-and-out-a-label
                 
@@ -89,7 +90,6 @@ class GameViewController: UIViewController {
                     self.emojiLabel.alpha = 0.0
                 }, completion: {
                     finished in
-                    
                     if finished {
                         //Once the label is completely invisible, set the text and fade it back in
                         
@@ -102,7 +102,6 @@ class GameViewController: UIViewController {
                         }, completion: nil)
                     }
                 })
-                
             }
             updateHearts()
             numQuestions -= 1
@@ -186,16 +185,13 @@ class GameViewController: UIViewController {
             if answer.attempt(letter: key) {
                 hintLabel.text = answer.render()
                 if answer.won() {
-                    print("round won")
-                    // TODO add an animation here between rounds
-                    // Animation added inside nextRound() function
-                    
+                    // win round
                     nextRound()
                 }
             } else {
                 heartCount -= 1
                 updateHearts()
-                // TODO: lose heart sound effect here
+                // lose heart sound effect here
                 playSound(sound: "lose")
             }
         
@@ -231,14 +227,14 @@ class GameViewController: UIViewController {
     }
     
 
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if let b: UIButton = sender as? UIButton {
-            print(b)
-        }
-    }
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//        if let b: UIButton = sender as? UIButton {
+//            print(b)
+//        }
+//    }
 }
