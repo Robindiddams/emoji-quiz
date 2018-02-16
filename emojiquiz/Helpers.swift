@@ -82,6 +82,12 @@ func getHighScores() -> [(name: String, score: Int)]{
     return highscores
 }
 
+// to determine if a given score belongs on the highscoreboard
+func getLowestScore() -> Int {
+    let hs = getHighScores()
+    return hs[2].score
+}
+
 func setHighScores(highscores: [(name: String, score: Int)]) {
     if highscores.count != 3 {
         print("it doesnt equal 3, \(highscores.count)")
@@ -95,18 +101,16 @@ func setHighScores(highscores: [(name: String, score: Int)]) {
 }
 
 // if the given highscore is worth, add it
-func attemptHighScore(name: String, score: Int) -> Bool{
-    var attempt: (name: String, score: Int) = (name: name, score: score)
-    
+func addHighScore(name: String, score: Int){
+    let attempt: (name: String, score: Int) = (name: name, score: score)
     var hs = getHighScores()
     hs.append(attempt)
-    print(hs.count)
-    
-    
-    
-    
-    
-    
-    return false
+    hs.sort { (a: (name: String, score: Int), b: (name: String, score: Int)) -> Bool in
+        if a.score > b.score {
+            return true
+        }
+        return false
+    }
+    setHighScores(highscores: Array(hs.prefix(3)))
 }
 

@@ -17,10 +17,12 @@ class LeaderboardController: UIViewController {
     @IBOutlet weak var numberThreeScore: UILabel!
     @IBOutlet weak var numberTwoScore: UILabel!
     @IBOutlet weak var numberOneScore: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         renderHighscores()
+        print("didload")
         // Do any additional setup after loading the view.
     }
 

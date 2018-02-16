@@ -26,6 +26,8 @@ extension Quiz {
 
 class GameViewController: UIViewController {
     
+    var score: Int = -1
+    var name: String = ""
     var heartCount: Int = 3
     var category: String = ""
     var numQuestions: Int = 1
@@ -73,6 +75,7 @@ class GameViewController: UIViewController {
 
     func nextRound() {
         resetAllLetterButtons()
+        score += 1
         if numQuestions > 0 {
             if let quiz = quizPack.popLast() {
                 // setup answer
@@ -86,24 +89,48 @@ class GameViewController: UIViewController {
             numQuestions -= 1
         } else {
             print("Game clear")
-            playSound(sound: "win")
-            //TODO: play win sound and show notification
-            let alert = UIAlertController(title: "Congrats!", message: "You beat answered all the questions", preferredStyle: UIAlertControllerStyle.alert)
+            winGame()
+        }
+    }
+    
+    func winGame() {
+        playSound(sound: "win")
+        let alert = UIAlertController(title: "Congrats!", message: "You beat answered all the questions", preferredStyle: UIAlertControllerStyle.alert)
+        
+        if score > getLowestScore() {
             // from  https://medium.com/@chan.henryk/alert-controller-with-text-field-in-swift-3-bda7ac06026c
             let action = UIAlertAction(title: "save!", style: .default) { (alertAction) in
-                if let _ = self.tabBarController?.selectedIndex {
+                // Go to leaderboard
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+                if let dest = self.tabBarController?.viewControllers?[1] as? LeaderboardController {
+                    let textField = alert.textFields![0] as UITextField
+                    // Try to post a highscore
+                    addHighScore(name: textField.text!, score: self.score)
                     self.tabBarController?.selectedIndex = 1
+                    dest.renderHighscores()
                 }
+                self.dismiss(animated: true, completion: {
+                    print("diddams")
+                })
             }
             alert.addTextField { (textField) in
                 textField.placeholder = "Enter your name"
             }
-            
             alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-            
-            
+        } else {
+            let action = UIAlertAction(title: "cool!", style: .default) { (alertAction) in
+                // Go to leaderboard
+                self.navigationController?.popViewController(animated: true)
+                self.dismiss(animated: true, completion: nil)
+                if let _ = self.tabBarController?.selectedIndex {
+                        self.tabBarController?.selectedIndex = 1
+                }
+                
+            }
+            alert.addAction(action)
         }
+        self.present(alert, animated: true, completion: nil)
     }
     
     func readPlist(){
@@ -189,8 +216,6 @@ class GameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        print("heeeeeeey")
         if let b: UIButton = sender as? UIButton {
             print(b)
         }
