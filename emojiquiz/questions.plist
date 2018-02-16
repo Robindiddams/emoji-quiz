@@ -18,9 +18,9 @@
 		</dict>
 		<dict>
 			<key>answer</key>
-			<string>planes trains and automobiles</string>
+			<string>spy kids</string>
 			<key>quiz</key>
-			<string>✈️🚂🚗</string>
+			<string>🕵️‍♂️🧒</string>
 		</dict>
 		<dict>
 			<key>answer</key>
@@ -28,20 +28,44 @@
 			<key>quiz</key>
 			<string>🦈🌪</string>
 		</dict>
+		<dict>
+			<key>answer</key>
+			<string>batman</string>
+			<key>quiz</key>
+			<string>🦇🚶‍♂️</string>
+		</dict>
 	</array>
 	<key>Animals</key>
 	<array>
 		<dict>
 			<key>answer</key>
-			<string>horse</string>
+			<string>seahorse</string>
 			<key>quiz</key>
-			<string>🐎</string>
+			<string>🌊🐎</string>
 		</dict>
 		<dict>
 			<key>answer</key>
 			<string>spider monkey</string>
 			<key>quiz</key>
 			<string>🕷🐒</string>
+		</dict>
+		<dict>
+			<key>answer</key>
+			<string>fishercat</string>
+			<key>quiz</key>
+			<string>🎣😸</string>
+		</dict>
+		<dict>
+			<key>answer</key>
+			<string>banana spider</string>
+			<key>quiz</key>
+			<string>🍌🕷</string>
+		</dict>
+		<dict>
+			<key>answer</key>
+			<string>sheep dog</string>
+			<key>quiz</key>
+			<string>🐑🐕</string>
 		</dict>
 	</array>
 </dict>
