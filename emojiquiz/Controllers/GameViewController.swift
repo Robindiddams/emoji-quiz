@@ -79,8 +79,27 @@ class GameViewController: UIViewController {
                 answer = quiz.answer
                 hintLabel.text = answer.render()
                 
-                //setup question
-                emojiLabel.text = quiz.question
+                //animation - modified from an answer from
+                // https://stackoverflow.com/questions/38988043/swift-fade-in-and-out-a-label
+                
+                UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
+                    self.emojiLabel.alpha = 0.0
+                }, completion: {
+                    finished in
+                    
+                    if finished {
+                        //Once the label is completely invisible, set the text and fade it back in
+                        
+                        //setup question
+                        self.emojiLabel.text = quiz.question
+                        
+                        // Fade in
+                        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseIn, animations: {
+                            self.emojiLabel.alpha = 1.0
+                        }, completion: nil)
+                    }
+                })
+                
             }
             updateHearts()
             numQuestions -= 1
@@ -142,6 +161,8 @@ class GameViewController: UIViewController {
                 if answer.won() {
                     print("round won")
                     // TODO add an animation here between rounds
+                    // Animation added inside nextRound() function
+                    
                     nextRound()
                 }
             } else {
