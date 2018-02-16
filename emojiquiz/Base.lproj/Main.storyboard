@@ -488,6 +488,14 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Leaderboard" image="second" id="cPa-gy-q4n" userLabel="Leaderboard"/>
+                    <connections>
+                        <outlet property="numberOneLabel" destination="Mhv-2r-LYg" id="Tqw-yQ-CCN"/>
+                        <outlet property="numberOneScore" destination="hIw-mc-K8h" id="ZUU-xa-RxI"/>
+                        <outlet property="numberThreeLabel" destination="TtQ-PG-ezC" id="LLb-Bk-5bd"/>
+                        <outlet property="numberThreeScore" destination="jdm-9I-UC4" id="ueE-mw-Tgx"/>
+                        <outlet property="numberTwoLabel" destination="yxs-MC-1Oc" id="6r9-Zp-1ej"/>
+                        <outlet property="numberTwoScore" destination="IIL-9V-GN2" id="Bkv-Kv-R7x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

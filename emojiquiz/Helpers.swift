@@ -33,8 +33,6 @@ public class HangmanString {
         return win
     }
     
-    
-    
     func isCorrectLetter(letter: Character) -> Bool {
         for guessedChar in correctLetters {
             if guessedChar == letter {
@@ -67,8 +65,48 @@ public class HangmanString {
     }
 }
 
+//struct highscore {
+//    var name: String
+//    var score: Int
+//}
 
-func addHighScore(name: String, score: Int) {
+func getHighScores() -> [(name: String, score: Int)]{
+    var highscores: [(name:String, score:Int)] = [(name:String, score:Int)]()
+    for i in 1...3 {
+        if let name = UserDefaults.standard.object(forKey: "highschore-\(i)-name") as? String, let score = UserDefaults.standard.object(forKey: "highschore-\(i)-score") as? Int {
+            highscores.append((name: name, score: score))
+        } else {
+            highscores.append((name: "robin", score: 0))
+        }
+    }
+    return highscores
+}
+
+func setHighScores(highscores: [(name: String, score: Int)]) {
+    if highscores.count != 3 {
+        print("it doesnt equal 3, \(highscores.count)")
+    }
+    var count: Int = 1
+    for h in highscores {
+        UserDefaults.standard.set(h.name, forKey: "highschore-\(count)-name")
+        UserDefaults.standard.set(h.score, forKey: "highschore-\(count)-score")
+        count += 1
+    }
+}
+
+// if the given highscore is worth, add it
+func attemptHighScore(name: String, score: Int) -> Bool{
+    var attempt: (name: String, score: Int) = (name: name, score: score)
     
+    var hs = getHighScores()
+    hs.append(attempt)
+    print(hs.count)
+    
+    
+    
+    
+    
+    
+    return false
 }
 
